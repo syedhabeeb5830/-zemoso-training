@@ -1,0 +1,161 @@
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   basic_commits.txt
+
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git log
+fatal: your current branch 'master' does not have any commits yet
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   basic_commits.txt
+
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git commit -m "created the file basic_commits.txt"
+[master (root-commit) 8ba69c8] created the file basic_commits.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 basic_commits.txt
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch master
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git branch basic_commits
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch master
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git checkout basic_commits
+Switched to branch 'basic_commits'
+syedU@PF3JLJNX:~/Desktop/basic_commits$ ls
+basic_commits.txt
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git log
+commit 8ba69c8576ced88212c1730171691b48a384f1e8 (HEAD -> basic_commits, master)
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:29:18 2022 +0530
+
+    created the file basic_commits.txt
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git push origin basic_commits
+Username for 'https://github.com': syedhabeeb5830
+Password for 'https://syedhabeeb5830@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 233 bytes | 233.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'basic_commits' on GitHub by visiting:
+remote:      https://github.com/syedhabeeb5830/zemoso-training/pull/new/basic_commits
+remote: 
+To https://github.com/syedhabeeb5830/zemoso-training
+ * [new branch]      basic_commits -> basic_commits
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git log
+commit 8ba69c8576ced88212c1730171691b48a384f1e8 (HEAD -> basic_commits, origin/basic_commits, master)
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:29:18 2022 +0530
+
+    created the file basic_commits.txt
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   basic_commits.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   basic_commits.txt
+
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   basic_commits.txt
+
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git commit -m "changed the contents of fbasic_commits.txt"
+[basic_commits 3fc3d58] changed the contents of fbasic_commits.txt
+ 1 file changed, 1 insertion(+)
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git commit -m "changed the file again"
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git log
+commit 3fc3d589c8c11687f3917da9441223d04e1f7e52 (HEAD -> basic_commits)
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:39:05 2022 +0530
+
+    changed the contents of fbasic_commits.txt
+
+commit 8ba69c8576ced88212c1730171691b48a384f1e8 (origin/basic_commits, master)
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:29:18 2022 +0530
+
+    created the file basic_commits.txt
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git commit -m "contents of file changed again"
+On branch basic_commits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   basic_commits.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git status
+On branch basic_commits
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   basic_commits.txt
+
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git commit -m "contents of file changed again"
+[basic_commits deadb96] contents of file changed again
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+syedU@PF3JLJNX:~/Desktop/basic_commits$ git log
+commit deadb96e6de5ee06f201152c89722edf84eacd49 (HEAD -> basic_commits)
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:42:55 2022 +0530
+
+    contents of file changed again
+
+commit 3fc3d589c8c11687f3917da9441223d04e1f7e52
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:39:05 2022 +0530
+
+    changed the contents of fbasic_commits.txt
+
+commit 8ba69c8576ced88212c1730171691b48a384f1e8 (origin/basic_commits, master)
+Author: syedhabeeb5830 <syedhabeeb5830@gmail.com>
+Date:   Thu Mar 31 01:29:18 2022 +0530
+
+    created the file basic_commits.txt
