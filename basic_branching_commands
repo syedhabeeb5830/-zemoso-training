@@ -1,0 +1,80 @@
+syedU@PF3JLJNX:~/Desktop/basic_staging$ cd ..
+syedU@PF3JLJNX:~/Desktop$ mkdir basic_branching
+syedU@PF3JLJNX:~/Desktop$ cd basic_branching/
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git init
+Initialized empty Git repository in /home/syedU/Desktop/basic_branching/.git/
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch mybranch
+fatal: Not a valid object name: 'master'.
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git remote add orgin https://github.com/syedhabeeb5830/zemoso-training
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch
+syedU@PF3JLJNX:~/Desktop/basic_branching$ touch names.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git commit -m "created names.txt"
+[master (root-commit) 2989651] created names.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 names.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch
+* master
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch mybranch
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git branch
+* master
+  mybranch
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git switch mybranch
+Switched to branch 'mybranch'
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git status
+On branch mybranch
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_branching$ touch file1.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git commit -m "created file1.txt"
+[mybranch b35a611] created file1.txt
+ 2 files changed, 1 insertion(+)
+ create mode 100644 file1.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git log --oneline --graph
+* b35a611 (HEAD -> mybranch) created file1.txt
+* 2989651 (master) created names.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git switch master
+Switched to branch 'master'
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git log --oneline --graph
+* 2989651 (HEAD -> master) created names.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ touch file2.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git add .
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git commit -m "created the file2.txt"
+[master 714d8c4] created the file2.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file2.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git log --oneline --graph --all
+* 714d8c4 (HEAD -> master) created the file2.txt
+| * b35a611 (mybranch) created file1.txt
+|/  
+* 2989651 created names.txt
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git switch mybranch
+Switched to branch 'mybranch'
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git status
+On branch mybranch
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/basic_branching$ git diff mybranch master
+diff --git a/file1.txt b/file1.txt
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/file2.txt b/file2.txt
+new file mode 100644
+index 0000000..d1bbf1a
+--- /dev/null
++++ b/file2.txt
+@@ -0,0 +1 @@
++this is the second file created for master branch...
+diff --git a/names.txt b/names.txt
+index 033d13f..e69de29 100644
+--- a/names.txt
++++ b/names.txt
+@@ -1 +0,0 @@
+-hello there, this is syed habeeb uddin...
