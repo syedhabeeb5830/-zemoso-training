@@ -1,0 +1,53 @@
+syedU@PF3JLJNX:~$ cd D
+bash: cd: D: No such file or directory
+syedU@PF3JLJNX:~$ cd Desktop/
+syedU@PF3JLJNX:~/Desktop$ mkdir ff_merge
+syedU@PF3JLJNX:~/Desktop$ cd ff_merge/
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git init
+Initialized empty Git repository in /home/syedU/Desktop/ff_merge/.git/
+syedU@PF3JLJNX:~/Desktop/ff_merge$ touch greeting1.txt
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	greeting1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git add .
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git commit -m "created greeting1.txt"
+[master (root-commit) 959d0d5] created greeting1.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 greeting1.txt
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git branch feature/uppercase
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git switch feature/uppercase 
+Switched to branch 'feature/uppercase'
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git status
+On branch feature/uppercase
+nothing to commit, working tree clean
+syedU@PF3JLJNX:~/Desktop/ff_merge$ vi greeting1.txt 
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git add .
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git branch
+* feature/uppercase
+  master
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git log --oneline --graph -all
+error: switch `l' expects a numerical value
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git switch master
+M	greeting1.txt
+Switched to branch 'master'
+syedU@PF3JLJNX:~/Desktop/ff_merge$ cat greeting1.txt 
+HELLO WORLD !
+
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git diff master feature/uppercase 
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git merge feature/uppercase 
+Already up to date.
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git branch -d feature/uppercase 
+Deleted branch feature/uppercase (was 959d0d5).
+syedU@PF3JLJNX:~/Desktop/ff_merge$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   greeting1.txt
+
