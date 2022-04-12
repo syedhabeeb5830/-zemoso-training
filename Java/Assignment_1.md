@@ -1,5 +1,5 @@
-# StringBuilder Class
-StringBuilder in Java is used to create mutable Strings. StringBuilder is non-synchronized when used with multithreading.
+# StringBuilder
+StringBuilder in Java is used to create mutable Strings. StringBuilder is non-synchronized when used with multithreadin
 ---
 <br></br>
 ## Constructors in StringBuilder
