@@ -1,5 +1,5 @@
 # StringBuilder
-StringBuilder in Java is used to create mutable Strings. StringBuilder is non-synchronized when used with multithreadin
+StringBuilder objects are like String objects, except that they can be modified. Internally, these objects are treated like variable-length arrays that contain a sequence of characters. At any point, the length and content of the sequence can be changed through method invocations.
 ---
 <br></br>
 ## Constructors in StringBuilder
@@ -8,8 +8,8 @@ StringBuilder in Java is used to create mutable Strings. StringBuilder is non-sy
 | StringBuilder(CharSequence seq) | Constructs a string builder that contains the same characters as the specified CharSequence. |
 | StringBuilder(int length) | Create empty StringBuilder with specified length |
 | StringBuilder() | It creates an empty String Builder with the initial capacity of 16. |
-
 | StringBuilder(String str) | Constructs a string builder initialized to the contents of the specified string. |
+
 ---
 <br></br>
 ## Methods in StringBuilder and Naming Conventions
