@@ -2,6 +2,8 @@
 Image result for stringbuilder class java
 StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
 
+StringBuilder objects are like String objects, except that they can be modified. Internally, these objects are treated like variable-length arrays that contain a sequence of characters. At any point, the length and content of the sequence can be changed through method invocations.
+
 ## Nameing Conventions: Java uses CamelCase as a practice for writing names of methods, variables, classes, packages, and constants. 
 
 Camel’s case in java programming consists of compound words or phrases such that each word or abbreviation begins with a capital letter or first word with a lowercase letter, rest all with capital. Here in simpler terms, it means if there are two 
