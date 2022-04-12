@@ -13,8 +13,7 @@ Camel’s case in java programming consists of compound words or phrases such th
 |---|-----|
 | StringBuilder(CharSequence seq) | Constructs a string builder that contains the same characters as the specified CharSequence. |
 | StringBuilder(int length) | Create empty StringBuilder with specified length |
-| StringBuilder() | It creates an empty String Builder with the initial capacity of 16. |
-| StringBuilder(String str) | Constructs a string builder initialized to the contents of the specified string. |
+
 
 ---
 <br></br>
