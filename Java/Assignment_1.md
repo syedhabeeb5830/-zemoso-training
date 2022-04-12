@@ -1,5 +1,5 @@
 # #StringBuilder
-StringBuilder objects are like String objects, except that they can be modified. Internally, these objects are treated like variable-length arrays that contain a sequence of characters. At any point, the length and content of the sequence can be changed through method invocations.
+StringBuilder objects are like String objects, they can be modified. Internally, these objects are treated like variable-length arrays that contain a sequence of characters. At any point, the length and content of the sequence can be changed through method invocations.
 
 ## Nameing Conventions: Java uses CamelCase as a practice for writing names of methods, variables, classes, packages, and constants. 
 
