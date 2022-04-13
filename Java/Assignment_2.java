@@ -19,5 +19,5 @@
         return true;
     }
 
-// Time complexity -  O(n)        where n is the length of the string
+// Time complexity -  O(n)         |   where 'n' is the length of the string
 // Space complexity - O(26)
