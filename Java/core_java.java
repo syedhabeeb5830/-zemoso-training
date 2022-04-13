@@ -5,31 +5,11 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static boolean checkStringForAllTheLetters(String str) {
-        int index = 0;
-        boolean[] vis = new boolean[26];
-
-        for (int i = 0; i < str.length(); i++) {
-            if ('a' <= str.charAt(i) && str.charAt(i) <= 'z') {
-                index = str.charAt(i) - 'a';
-            }
-            else if ('A' <= str.charAt(i) && str.charAt(i) <= 'Z') {
-                index = str.charAt(i) - 'A';
-            }
-            vis[index] = true;
-        }
-
-        for(boolean ele: vis){
-            if(!ele)
-                return false;
-        }
-        return true;
-    }
 
     public static void main(String[] args) {
         // write your code here
 
-      /*  // Arithmetic operators
+      // Arithmetic operators
 
 
         // declare variables
@@ -49,10 +29,8 @@ public class Main {
 
         // modulo operator
         System.out.println("a % b = " + (a % b));
-        */
 
 
-        /* // Assignmet Operators
 
 
         // create variables
@@ -70,9 +48,8 @@ public class Main {
         b *= a;
         System.out.println("var using *=: " + b);
 
-        */
 
-       /* //Relational Operators
+       //Relational Operators
         // create variables
         int a = 7, b = 11;
 
@@ -97,9 +74,8 @@ public class Main {
         // <= operator
         System.out.println(a <= b);  // true
 
-        */
 
-       /* // Logical Operators
+       // Logical Operators
 
 
 
@@ -116,11 +92,9 @@ public class Main {
         System.out.println(!(5 == 3));  // true
         System.out.println(!(5 > 3));  // false
 
-        */
 
 
-
-        /*// Arrays
+       // Arrays
 
         // create an array
         int[] age = {12, 4, 5, 2, 5};
@@ -133,9 +107,9 @@ public class Main {
         System.out.println("Fourth Element: " + age[3]);
         System.out.println("Fifth Element: " + age[4]);
 
-         */
+        
 
-       /* //ArrayList
+      //ArrayList
         ArrayList<String> animals = new ArrayList<>();
 
         // add elements in the arraylist
@@ -148,10 +122,10 @@ public class Main {
         String str = animals.get(1);
         System.out.print("Element at index 1: " + str);
 
-        */
+       
 
 
-       /* //Strings
+       //Strings
 
         // create first string
         String first = "Java ";
@@ -175,10 +149,10 @@ public class Main {
         System.out.print("The extracted substring is : ");
         System.out.println(Str.substring(10));
 
-        */
+  
         
         
-        /*//StringBuilder
+        //StringBuilder
 
 
         // create a StringBuilder object
