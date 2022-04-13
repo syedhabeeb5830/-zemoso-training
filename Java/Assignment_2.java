@@ -1,6 +1,6 @@
     public static boolean checkStringForAllTheLetters(String str) {
         int index = 0;
-        boolean[] vis = new boolean[26];
+        boolean[] visited = new boolean[26];
 
         for (int i = 0; i < str.length(); i++) {
             if ('a' <= str.charAt(i) && str.charAt(i) <= 'z') {
@@ -9,10 +9,10 @@
             else if ('A' <= str.charAt(i) && str.charAt(i) <= 'Z') {
                 index = str.charAt(i) - 'A';
             }
-            vis[index] = true;
+            visited[index] = true;
         }
 
-       for(boolean ele: vis){
+       for(boolean ele: visited){
            if(!ele)
                return false;
        }
