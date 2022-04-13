@@ -1,13 +1,13 @@
-    public static boolean checkStringForAllTheLetters(String input) {
+    public static boolean checkStringForAllTheLetters(String str) {
         int index = 0;
         boolean[] vis = new boolean[26];
 
-        for (int i = 0; i < input.length(); i++) {
-            if ('a' <= input.charAt(i) && input.charAt(i) <= 'z') {
-                index = input.charAt(i) - 'a';
+        for (int i = 0; i < str.length(); i++) {
+            if ('a' <= str.charAt(i) && str.charAt(i) <= 'z') {
+                index = str.charAt(i) - 'a';
             }
-            else if ('A' <= input.charAt(i) && input.charAt(i) <= 'Z') {
-                index = input.charAt(i) - 'A';
+            else if ('A' <= str.charAt(i) && str.charAt(i) <= 'Z') {
+                index = str.charAt(i) - 'A';
             }
             vis[index] = true;
         }
