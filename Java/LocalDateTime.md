@@ -9,7 +9,7 @@ Camel’s case in java programming consists of compound words or phrases such th
 
 ---
 <br></br>
-## Methods in StringBuilder and Naming Conventions
+## Methods in LocalDateTime and Naming Conventions
 | Method Name | Description and Naming Convention |
 |---|---|
 
