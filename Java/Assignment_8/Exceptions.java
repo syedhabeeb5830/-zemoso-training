@@ -26,13 +26,15 @@ public class HandlingExceptions   {
 
 
 
-     public void checkPerson(String name, int age ) throws NameException, IncorrectArgument, NullException {
-         if(!this.name.equals(name))
+     public void checkPerson(String name, int age ) throws NameException, IncorrectArgument {
+         if(weight <= 0)
+             throw new NullPointerException();
+         if(!this.name.equals(name)) {
              throw new NameException("name mismatch");
-         if(age <=0 || age >= 120)
+         }
+         if(age <=0 || age >= 120) {
              throw new IncorrectArgument("Enter the correct age");
-         if(weight > 100)
-             throw new NullException("weight not initialized");
+         }
 
     }
 
@@ -44,7 +46,7 @@ public class HandlingExceptions   {
          try{
              handlingExceptions.checkPerson("someone", 150);
          }
-         catch (NameException |  IncorrectArgument |  NullException e){
+         catch (NameException |  IncorrectArgument |  NullPointerException e){
 
              System.out.println(e.getMessage());
         }
@@ -52,12 +54,6 @@ public class HandlingExceptions   {
              System.out.println("Bye");
         }
     }
-
-
-
-
-
-
 
 
 }

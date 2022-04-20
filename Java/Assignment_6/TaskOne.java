@@ -18,7 +18,8 @@ public class TaskOne {
                 String y = Integer.toString(j);
                 String z = Integer.toString(num);
 
-                if(z.length()%2!=0 && x.length() != y.length()){
+              
+                if(z.length()%2!=0 && x.length() != y.length() && !(x.charAt(x.length()-1)=='0'&& y.charAt(y.length()-1)=='0') ){
                     break;
                 }
 
