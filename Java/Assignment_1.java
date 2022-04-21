@@ -6,8 +6,6 @@ public class Main {
 
     private static void findFile()
     {
-
-
         // Specifying path where to search for the file or a folder
         File file = new File("/home/syedU/Desktop");
         Scanner in = new Scanner(System.in);
@@ -16,8 +14,8 @@ public class Main {
         while(true){
             System.out.println("1. For searching for the file");
             System.out.println("2. For stop searching");
-            int num = in.nextInt();
-            if(num == 2)break;
+            int option = in.nextInt();
+            if(option == 2)break;
             else {
                 boolean isFound = false;
                 System.out.println("enter the name of the file or folder");
@@ -41,25 +39,11 @@ public class Main {
 
         }
 
-
-
-
     }
 
-
-
     public static void main(String[] args) {
-        // write your code here
-
-//
+    
         findFile();
-
-
-
-
-
-
-
 
     }
 }
