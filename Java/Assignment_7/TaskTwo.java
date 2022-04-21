@@ -9,7 +9,7 @@ class Cycle{
 }
 class Unicycle extends Cycle{
     public void balance(){
-        System.out.println("difficult ot balance");
+        System.out.println("difficult to balance");
     }
 }
 class Bicycle extends Cycle{
