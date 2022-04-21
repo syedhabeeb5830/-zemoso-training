@@ -17,23 +17,18 @@ public class TaskOne {
                 String x = Integer.toString(i);
                 String y = Integer.toString(j);
                 String z = Integer.toString(num);
-
-              
-                if(z.length()%2!=0 && x.length() != y.length() && !(x.charAt(x.length()-1)=='0'&& y.charAt(y.length()-1)=='0') ){
+                //checking trailing zeroes
+                if((x.charAt(x.length()-1)=='0'&& y.charAt(y.length()-1)=='0'))
                     break;
-                }
-
-
+                //checking for odd length number
+                if(z.length()%2!=0 && x.length() != y.length())
+                    break;
                 String curr_ans = x + y;
-
-
-
                 num_char = z.toCharArray();
                 curr_char = curr_ans.toCharArray();
 
                 Arrays.sort(num_char);
                 Arrays.sort(curr_char);
-
                 if(Arrays.equals(num_char, curr_char) ) {
                     System.out.println(i + " * " + j + " = " + num);
                     count++;

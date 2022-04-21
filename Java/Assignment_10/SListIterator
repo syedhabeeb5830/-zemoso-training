@@ -1,0 +1,53 @@
+package Assignment_10;
+
+public class SListIterator {
+    private SList last = null;
+    private SList head = null;
+
+    public SListIterator(){}
+    public SListIterator(SList head){
+        this.head = head;
+        this.last = head;
+    }
+    public <T> void insert(T data){
+        if(head.getData() == null){
+            head.setData(data);
+            head.setNext(new SList<T>());
+        }
+        SList<T> newNode = new SList<>();
+        last.setData(data);
+        last.setNext(newNode);
+        last = newNode;
+    }
+    public boolean hasNext(){
+        return head.getData()!= null;
+    }
+    public <T> void remove(T data){
+        SList<T> temp = head;
+
+        if(head.getData() == data){
+            head = head.getNext();
+        }else{
+            SList<T> prev = head;
+
+            while(temp.getNext() != null && !temp.getData().equals(data)){
+                prev  = temp;
+                temp = temp.getNext();
+            }
+
+            if(temp.getNext() != null){
+                prev.setNext(temp.getNext());
+                temp.setNext(null);
+            }
+        }
+    }
+    public <T> void printList(){
+        SList<T> temp = head;
+        while(temp.getNext() != null){
+            System.out.println(temp);
+            temp = temp.getNext();
+        }
+    }
+
+}
+
