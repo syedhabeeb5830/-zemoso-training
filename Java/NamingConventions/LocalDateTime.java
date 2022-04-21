@@ -41,6 +41,4 @@ public class Main {
         System.out.println(localDateTime.format(dateTimeFormatter));
 
     }
-
-    }
 }
