@@ -19,7 +19,7 @@ public class Main {
         localDate = localDate.plusDays(2);
         System.out.println(localDate);
 
-        // minusDays() subtracts the specified days, weeks or years
+        // minusDays() subtracts the specified days, weeks or years from the given date
         localDate = localDate.minusDays(5);
         System.out.println(localDate);
 
@@ -32,7 +32,7 @@ public class Main {
         LocalTime localTime = LocalTime.of(14, 38);
         System.out.println(localTime);
 
-        //It is used to obtain an instance of LocalDateTime from a date and time.
+        //It is used to obtain an instance of LocalDateTime  from a date and time.
         LocalDateTime localDateTime = LocalDateTime.of(localDate, localTime);
         System.out.println(localDateTime);
 
