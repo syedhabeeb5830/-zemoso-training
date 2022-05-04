@@ -1,0 +1,21 @@
+
+
+-- Find out the PG-13 rated comedy movies. DO NOT use the film_list table.
+SELECT * FROM film WHERE RATING='PG-13';
+
+-- Find out the top 3 rented horror movies.
+SELECT film.* FROM film_list INNER JOIN film on film.film_id=film_list.FID WHERE film_list.category = 'Horror' ORDER BY film.rental_duration DESC LIMIT 3;
+
+--  Find out the list of customers from India who have rented sports movies.
+
+SELECT DISTINCT customer_list.ID, customer_list.name FROM customer_list INNER JOIN rental on rental.customer_id=customer_list.ID
+INNER JOIN inventory ON inventory.inventory_id=rental.inventory_id INNER JOIN film_list on film_list.FID=inventory.film_id WHERE film_list.category='Sports' AND customer_list.country='India';
+
+-- Find out the list of customers from Canada who have rented “NICK WAHLBERG” movies.
+
+SELECT DISTINCT customer_list.ID, customer_list.name FROM customer_list INNER JOIN rental on rental.customer_id = customer_list.ID INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id INNER JOIN film_actor ON inventory.film_id = film_actor.film_id
+INNER JOIN actor_info ON film_actor.actor_id = actor_info.actor_id WHERE actor_info.first_name = "NICK" AND actor_info.last_name = "WAHLBERG" AND customer_list.country = "Canada";
+
+-- Find out the number of movies in which “SEAN WILLIAMS” acted.
+
+SELECT count(*) as Number_of_movies FROM (SELECT film_actor.* FROM film_actor INNER JOIN actor_info ON film_actor.actor_id = actor_info.actor_id WHERE actor_info.first_name = "SEAN" AND actor_info.last_name = "WILLIAMS") as film_by_actor INNER JOIN film ON film.film_id = film_by_actor.film_id;

@@ -1,0 +1,25 @@
+
+
+use sakila;
+-- Find out the number of sci-fi movies rented by the store managed by Jon Stephens.
+
+SELECT count(*) as TotalDeletedScenes FROM film_list INNER JOIN film ON film_list.FID = film.film_id WHERE film_list.category = 'Documentary' AND film.special_features LIKE '%DELETED SCENE%';
+
+-- Find out the number of sci-fi movies rented by the store managed by Jon Stephens.
+
+SELECT count(DISTINCT FID) FROM rental INNER JOIN inventory ON rental.inventory_id = inventory.inventory_id INNER JOIN store ON inventory.store_id = store.store_id INNER JOIN film_list ON film_list.FID = inventory.film_id WHERE store.manager_staff_id = (SELECT ID from staff_list WHERE name="Jon Stephens") AND film_list.category="SCI-FI";
+
+-- Find out the total sales from Animation movies.
+
+SELECT total_sales FROM sales_by_film_category WHERE category = "Animation";
+
+
+-- Find out the top 3 rented category of movies by “PATRICIA JOHNSON”.
+
+SELECT film_list.category FROM rental INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id INNER JOIN film_list ON film_list.FID = inventory.film_id WHERE store_id = (SELECT SID from customer_list WHERE customer_list.name = "PATRICIA JOHNSON") GROUP BY film_list.category LIMIT 3;
+
+
+-- Find out the number of R rated movies rented by “SUSAN WILSON”
+
+SELECT count(DISTINCT film_list.title) FROM rental INNER JOIN inventory ON inventory.inventory_id = rental.inventory_id INNER JOIN film_list ON film_list.FID = inventory.film_id WHERE store_id = (SELECT SID from customer_list WHERE customer_list.name = "SUSAN WILSON") AND film_list.rating = 'R'
+
